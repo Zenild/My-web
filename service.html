@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <style>
+        body {
+            background: silver;
+        }
+       .menu-rideau {
+            background-color: #f2f2f2;
+            color: #333;
+            padding: 1em;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+       .menu-rideau ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+       .menu-rideau li {
+            margin-right: 20px;
+        }
+       .menu-rideau a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: #f2f2f2;
+            box-shadow: none;
+            border: 1px solid #ddd;
+        }
+       .menu-rideau a:hover {
+            background-color: #f5f5f5;
+        }
+       .gallerie {
+            display: flex;
+            flex-direction: column; /* Ajout pour disposer les éléments verticalement */
+            align-items: center;
+            margin-top: 20px;
+        }
+       .photo-bouton {
+            width: 150px;
+            height: 100px;
+            margin: 10px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+       .photo-bouton:hover {
+            opacity: 0.8;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide des voitures et leurs prix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+        </nav>
+    </header>
+    <main>
+        <section id="marques">
+            <h1>Les marques de voitures</h1>
+            <p>Notre site propose une large sélection de marques de voitures, allant des plus grandes marques du monde aux plus petites et plus exclusives.</p>
+            <ul>
+                <li><img src="ferrari-logo.jpg" alt="Logo Ferrari"> Ferrari</li>
+                <li><img src="porsche-logo.png" alt="Logo Porsche"> Porsche</li>
+                <li><img src="bmw-logo.png" alt="Logo BMW"> BMW</li>
+                <li><img src="mercedes-logo.png" alt="Logo Mercedes"> Mercedes</li>
+                <li><img src="audi-logo.png" alt="Logo Audi"> Audi</li>
+                <!-- Ajouter d'autres marques ici -->
+            </ul>
+        </section>
+        <section id="prix">
+            <h1>Les prix des voitures</h1>
+            <p>Notre site vous permet de comparer les prix des voitures de différentes marques et modèles.</p>
+            <table>
+                <tr>
+                    <th>Marque</th>
+                    <th>Modèle</th>
+                    <th>Prix</th>
+                </tr>
+                <tr>
+                    <td>Ferrari</td>
+                    <td>488 Pista</td>
+                    <td>429 900 € - 484 500 €</td>
+                </tr>
+                <tr>
+                    <td>Porsche</td>
+                    <td>911 Carrera S</td>
+                    <td>114 000 € - 134 000 €</td>
+                </tr>
+                <tr>
+                    <td>BMW</td>
+                    <td>M4 Competition</td>
+                    <td>74 000 € - 84 000 €</td>
+                </tr>
+                <tr>
+                    <td>Mercedes</td>
+                    <td>AMG GT 63 S</td>
+                    <td>134 000 € - 154 000 €</td>
+                </tr>
+                <tr>
+                    <td>Audi</td>
+                    <td>R8 V10 Plus</td>
+                    <td>174 000 € - 194 000 €</td>
+                </tr>
+                <!-- Ajouter d'autres modèles et prix ici -->
+            </table>
+        </section>
+        <section id="fonctionnalites">
+            <h1>Fonctionnalités du site</h1>
+            <p>Notre site propose de nombreuses fonctionnalités pour vous aider à trouver la voiture de vos rêves.</p>
+            <ul>
+                <li>Recherche par marque et modèle</li>
+                <li>Comparaison des prix</li>
+                <li>Filtrage par année et kilométrage</li>
+                <li>Galeries de photos et vidéos</li>
+                <li>Informations détaillées sur les voitures</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h1>Contact</h1>
+            <p>Pour toutes les questions ou les remarques, n'hésitez pas à nous contacter.</p>
+            <form>
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom"><br><br>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email"><br><br><form action="send_email.php" method="post">
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email" required><br><br>
+    <?php
+    $email = $_POST['zenildelutu@gmail.com'];
+    $to = 'zenildelutu@gmail.com';
+    $subject = 'Nouveau message de ' . $email;
+    $message = 'Voici le message de ' . $email;
+    $headers = 'From: ' . $email;
+
+    if (mail($to, $subject, $m
+                <label for="message">Message :</label>
+                <textarea id="message" name="message"></textarea><br><br>
+                <input type="submit" value="Envoyer">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; copyright 2024 car worid. Tout droit réserver 
